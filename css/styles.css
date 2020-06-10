@@ -1,0 +1,196 @@
+/*
+  Colors
+
+  Very Light Grayish Blue: #F6F6FE
+  Light Grayish Blue: #B3B5C6
+  Grayish Blue: #6D708D
+  Dark Grayish Blue: #494C5F
+*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F6F6FE;
+  background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right top, left bottom;
+}
+
+.heading {
+  color: #6D708D;
+  text-align: center;
+  margin: 2%;
+  transition: .2s;
+}
+
+.toggle-button {
+  color: #B3B5C6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  height: 34px;
+  width: 60px;
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 50px;
+  position: relative;
+  margin: 10px 20px;
+}
+
+.switch:hover {
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  opacity: .5;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 5px;
+  right: 5px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  transform: translateX(-26px);
+}
+
+.card-section {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% auto;
+}
+
+.card {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+              0 12.5px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.card .specs {
+  padding: 15px 0;
+  border-bottom: 1px solid #B3B5C6;
+}
+
+.card-sm {
+  height: 400px;
+  width: 350px;
+  background-color: white;
+  color: #6D708D;
+}
+
+.card-bg {
+  padding: 50px 30px;
+  height: 435px;
+  width: 325px;
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #FFFFFF;
+}
+
+/* Price tag in the cards */
+
+.price {
+  font-size: 4rem;
+}
+
+.card-sm .price {
+  color: #494C5F;
+}
+
+.price-monthly {
+  display: block;
+}
+
+.price-annually {
+  display: none;
+}
+
+/* Button in the cards */
+
+.button {
+  margin-top: 30px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.btn-sm {
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #FFFFFF;
+}
+
+.btn-sm:hover {
+  background-image: none;
+  color: #696FDD;
+  border: 1px solid #696FDD;
+}
+
+.btn-bg {
+  background-color: #FFFFFF;
+  color: #696FDD;
+}
+
+.btn-bg:hover {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+@media (max-width: 850px) {
+  body {
+    background-image: url("../images/bg-top.svg");
+    background-position: right -150px top -30px;
+  }
+
+  .heading {
+    margin: 40px auto;
+  }
+
+  .card-section {
+    flex-direction: column;
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  .card {
+    margin: 10px auto;
+  }
+
+  .card-sm, .card-bg {
+    width: 300px;
+  }
+
+  .price {
+    font-size: 3rem;
+  }
+}
